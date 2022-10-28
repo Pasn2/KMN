@@ -33,7 +33,7 @@ class RegisterActivity : AppCompatActivity() {
             if(TermsCheckBox.isChecked){
                 auth.createUserWithEmailAndPassword(EmailEditText.text.toString(),PasswordEditText.text.toString()).addOnCompleteListener{
                         task -> if (task.isSuccessful){
-                            val Data = hashMapOf(EmailEditText.text.toString() to String,PasswordEditText.text.toString() to String)
+                            val Data = hashMapOf("Email" to EmailEditText.text.toString(),"password" to PasswordEditText.text.toString(),"login" to LoginEditText.text.toString())
                     db.collection("Users").document(EmailEditText.text.toString()).set(Data)
                         .addOnCompleteListener{
                             println("Koxx")

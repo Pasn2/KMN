@@ -8,9 +8,9 @@
         android:icon="@drawable/ic_baseline_search_24"
         android:id="@+id/SearchBtn"/>
     <item
-        android:id="@+id/MyStocks"
-        android:icon="@drawable/ic_baseline_leaderboard_24"
-        android:title="My Stocks" />
+        android:id="@+id/News"
+        android:icon="@drawable/ic_baseline_article_24"
+        android:title="News" />
     <item android:title="My Profile"
         android:icon="@drawable/ic_baseline_person_24"
         android:id="@+id/ProfileBtn"/>

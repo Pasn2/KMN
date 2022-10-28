@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.SearchBtn ->{
                     ChangeFragment(Search_Fragment())
                 }
-                R.id.MyStocks ->{
+                R.id.News ->{
                     ChangeFragment(MyStock_Fragment())
                 }
                 R.id.ProfileBtn ->{
@@ -40,5 +40,10 @@ class MainActivity : AppCompatActivity() {
         var fragmenttransaction:FragmentTransaction = fragmentManager.beginTransaction()
         fragmenttransaction.replace(R.id.MainFrameLayout,fragment)
         fragmenttransaction.commit()
+    }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finish()
     }
 }

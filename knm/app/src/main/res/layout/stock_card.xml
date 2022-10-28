@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="210dp"
+    android:layout_height="155dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/MyProfileStockCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:cardElevation="5dp"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/MyProfileDescryptionStockCardText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="IDK"
+            android:textAlignment="center"
+            android:translationX="0dp"
+            android:translationY="80dp" />
+
+        <Button
+            android:id="@+id/BuyStockCardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BUY"
+            android:translationX="0dp"
+            android:translationY="100dp" />
+
+        <TextView
+            android:id="@+id/MyProfilePLStockCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="P/L -3000 USD"
+            android:translationX="0dp"
+            android:translationY="50dp" />
+
+        <Button
+            android:id="@+id/SellStockCardBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SELL"
+            android:translationX="111dp"
+            android:translationY="100dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/MyProfileStockCardName"
+                android:layout_width="105dp"
+                android:layout_height="wrap_content"
+                android:text="KGHM"
+                android:textSize="34sp" />
+
+            <TextView
+                android:id="@+id/MyProfilePriceStockCardText"
+                android:layout_width="92dp"
+                android:layout_height="wrap_content"
+                android:text="30000 USD/Stock"
+                android:textAlignment="textEnd"
+                android:translationY="-20dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
