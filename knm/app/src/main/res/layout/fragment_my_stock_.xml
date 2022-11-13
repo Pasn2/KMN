@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MyStock_Fragment">
+    tools:context=".News_Fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -13,14 +13,14 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/NewsRecyclerView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="409dp"
+            android:layout_height="728dp"
             android:clipChildren="false"
             android:clipToPadding="false"
             app:barrierMargin="3dp"
             app:spanCount="1"
-            tools:layout_editor_absoluteX="2dp"
-            tools:layout_editor_absoluteY="2dp"
+            tools:layout_editor_absoluteX="1dp"
+            tools:layout_editor_absoluteY="1dp"
             tools:listitem="@layout/news_card">
 
         </androidx.recyclerview.widget.RecyclerView>

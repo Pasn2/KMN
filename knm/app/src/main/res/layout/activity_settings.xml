@@ -15,7 +15,7 @@
             android:id="@+id/SettingsThemeSwitch"
             android:layout_width="match_parent"
             android:layout_height="58dp"
-            android:text="Light/Dark Mode" />
+            android:text="Dark/Light Mode" />
 
         <TextView
             android:id="@+id/SettingsChangeEmailText"

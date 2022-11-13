@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
                     ChangeFragment(Search_Fragment())
                 }
                 R.id.News ->{
-                    ChangeFragment(MyStock_Fragment())
+                    ChangeFragment(News_Fragment())
                 }
                 R.id.ProfileBtn ->{
                     ChangeFragment(Profile_Fragment())

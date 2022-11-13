@@ -11,17 +11,17 @@ class NewsViewAdapter(private val NewsList: ArrayList<NewsData>): RecyclerView.A
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.news_card,parent,false)
         return MyViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: NewsViewAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         val currentItem = NewsList[position]
         holder.NewsTitle.text = currentItem.title
-        holder.NewsShortDesc.text = currentItem.shortdesc
+        holder.NewsShortDesc.text = currentItem.Descryption
 
     }
 
@@ -29,11 +29,7 @@ class NewsViewAdapter(private val NewsList: ArrayList<NewsData>): RecyclerView.A
         return NewsList.size
     }
     class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
-
-        val CardView: CardView = itemView.findViewById(R.id.NewsCard)
         val NewsTitle: TextView = itemView.findViewById(R.id.NewsTitleText)
         val NewsShortDesc: TextView =itemView.findViewById(R.id.NewsShortDescryptionText)
-        var Image: View = itemView.findViewById(R.id.NewsImageView)
-
     }
 }

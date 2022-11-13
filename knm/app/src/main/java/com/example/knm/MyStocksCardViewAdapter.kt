@@ -12,13 +12,13 @@ class MyStocksCardViewAdapter(private val stocklist: ArrayList<StockData>): Recy
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyStocksCardViewAdapter.MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.stock_card_without_btns,parent,false)
         return MyViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: MyStocksCardViewAdapter.MyViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         val currentItem = stocklist[position]
         holder.ScStockName.text = currentItem.ShortcutName

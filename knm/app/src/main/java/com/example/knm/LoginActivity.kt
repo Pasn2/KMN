@@ -36,22 +36,25 @@ class LoginActivity : AppCompatActivity() {
             startActivity(ForgotPassIntent)
         }
         LoginBtn.setOnClickListener{
-            auth.signInWithEmailAndPassword(EmailEditText.text.toString(),PasswordEditText.text.toString()).addOnCompleteListener{task ->
-                if (task.isSuccessful) {
-                    Toast.makeText(applicationContext,"Loggin Sucesfull",Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this,MainActivity::class.java).apply {}
-                    startActivity(intent)
+            if(!EmailEditText.text.isNullOrEmpty() || PasswordEditText.text.isNullOrEmpty()){
+                auth.signInWithEmailAndPassword(EmailEditText.text.toString(),PasswordEditText.text.toString()).addOnCompleteListener{task ->
+                    if (task.isSuccessful) {
+                        Toast.makeText(applicationContext,"Loggin Sucesfull",Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this,MainActivity::class.java).apply {}
+                        startActivity(intent)
+                        PasswordEditText.text = null
+                        EmailEditText.text = null
 
+                    }
+                    else{
+                        Toast.makeText(applicationContext,"Error",Toast.LENGTH_SHORT).show()
+                    }
+
+
+                }.addOnFailureListener { exeption ->
+                    Toast.makeText(applicationContext,"Error $exeption",Toast.LENGTH_SHORT).show()
                 }
-                else{
-                    Toast.makeText(applicationContext,"Error",Toast.LENGTH_SHORT).show()
-                }
-
-
-            }.addOnFailureListener { exeption ->
-                Toast.makeText(applicationContext,"Error $exeption",Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 }

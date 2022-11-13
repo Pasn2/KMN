@@ -23,7 +23,7 @@ class Settings : AppCompatActivity() {
 
 
         ThemeSwitch.setOnCheckedChangeListener{ _ , isChecked ->
-            val ChangeTheme = if (isChecked) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES) else  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            val ChangeTheme = if (isChecked) AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO) else  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
 
         }
         SettingsChangeemailBtn.setOnClickListener{

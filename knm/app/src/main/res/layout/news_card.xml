@@ -3,46 +3,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="145dp">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/NewsCard"
-        android:layout_width="410dp"
-        android:layout_height="133dp">
+        android:layout_width="412dp"
+        android:layout_height="113dp"
+        tools:layout_editor_absoluteY="2dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/NewsImageView"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/NewsTitleText"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_weight="1"
+                android:text="ihn"
+                android:textSize="20sp" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/NewsTitleText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="KUTAS W CIASTO JEBAC BASTION"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:id="@+id/NewsShortDescryptionText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="75dp"
-                    android:layout_weight="1"
-                    android:text="knononoinin ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," />
-            </LinearLayout>
-
+            <TextView
+                android:id="@+id/NewsShortDescryptionText"
+                android:layout_width="match_parent"
+                android:layout_height="88dp"
+                android:layout_weight="1"
+                android:text="knononoinin ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
